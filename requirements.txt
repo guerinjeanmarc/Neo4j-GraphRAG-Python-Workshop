@@ -1,11 +1,16 @@
 # Neo4j GraphRAG Workshop Requirements
 # For local setup (Colab users: use the pip install cell in notebooks)
 
-neo4j>=5.18.0
-neo4j-graphrag[experimental,openai]>=0.10.0
-langchain-openai>=0.2.0
-python-dotenv>=1.0.0
-langchain-text-splitters>=0.3.0
-pypdf>=5.0.0
-jupyter>=1.0.0
+neo4j
+"neo4j-graphrag[openai]"
+langchain-text-splitters
+python-dotenv
+langchain-text-splitters
+pypdf
+google-genai 
+pymupdf
+"neo4j-graphrag[experimental]"
+neo4j_viz
+json-repair
+jupyter
 

@@ -1,6 +1,6 @@
 # Neo4j GraphRAG Python Workshop
 
-A 2-hour hands-on training on building knowledge graphs from PDFs and implementing GraphRAG with the Neo4j GraphRAG Python package.
+A 2-hour hands-on training on building knowledge graphs from complex PDFs and implementing GraphRAG with the Neo4j GraphRAG Python package.
 
 ## 📚 Workshop Overview
 
@@ -31,11 +31,11 @@ Learn to build production-ready knowledge graph pipelines:
 
 ### Option 1: Google Colab (Recommended)
 
-1. Open the first notebook: [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/YOUR_USERNAME/GraphRAG-Workshop/blob/main/workshop-notebooks/01_quickstart_text2cypher.ipynb)
+1. Open the first notebook: [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/guerinjeanmarc/Neo4j-GraphRAG-Python-Workshop/blob/main/workshop-notebooks/01_quickstart_text2cypher.ipynb)
 
 2. Set up your credentials:
    - Neo4j connection details (URI, username, password)
-   - Gemini API key
+   - OpenAI API key
 
 3. Follow along with the instructor!
 
@@ -43,7 +43,7 @@ Learn to build production-ready knowledge graph pipelines:
 
 ```bash
 # Clone the repository
-git clone https://github.com/YOUR_USERNAME/GraphRAG-Workshop.git
+git clone https://github.com/guerinjeanmarc/Neo4j-GraphRAG-Python-Workshop.git
 cd GraphRAG-Workshop
 
 # Create virtual environment
