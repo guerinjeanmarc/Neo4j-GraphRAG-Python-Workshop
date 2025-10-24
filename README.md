@@ -66,9 +66,9 @@ jupyter notebook workshop-notebooks/
 | Notebook | Duration | Description | Models | Execution |
 |----------|----------|-------------|---------|-----------|
 | [01_quickstart_text2cypher.ipynb](workshop-notebooks/01_quickstart_text2cypher.ipynb) | 50 min | Build KG from PDFs + Text2Cypher queries | OpenAI (gpt-4o-mini) | ✅ Hands-on |
-| [02_custom_extractors.ipynb](workshop-notebooks/02_custom_extractors.ipynb) | 10 min | Custom Gemini extractor for complex PDFs | Gemini (2.5-flash vision) | ✅ Hands-on |
-| [03_full_pipeline_walkthrough.ipynb](workshop-notebooks/03_full_pipeline_walkthrough.ipynb) | 15 min | Complete multi-document pipeline (pre-loaded data) | Gemini | 👀 Demo |
-| [04_agentic_graphrag.ipynb](workshop-notebooks/04_agentic_graphrag.ipynb) | 30 min | Agentic patterns with MCP | OpenAI | 👀 Demo |
+| [02_custom_extractors.ipynb](workshop-notebooks/02_custom_extractors.ipynb) | 10 min | Custom Gemini extractor for complex PDFs | Gemini (2.5-flash) | ✅ Hands-on |
+| [03_full_pipeline_walkthrough.ipynb](workshop-notebooks/03_full_pipeline_walkthrough.ipynb) | 15 min | Complete multi-document pipeline (pre-loaded data) | Gemini (2.5-flash) | 👀 Demo |
+| [04_agentic_graphrag.md](workshop-notebooks/04_agentic_graphrag.md) | 30 min | Agentic patterns with MCP | Claude Desktop | 👀 Demo |
 
 **Note:** Notebooks 3-4 use pre-loaded data from a shared Neo4j Aura instance (credentials provided by instructor).
 
@@ -80,16 +80,12 @@ GraphRAG-Workshop/
 │   ├── 01_quickstart_text2cypher.ipynb
 │   ├── 02_custom_extractors.ipynb
 │   ├── 03_full_pipeline_walkthrough.ipynb
-│   └── 04_agentic_graphrag.ipynb
+│   └── 04_agentic_graphrag.md
 ├── workshop-data/          # Sample pharmaceutical PDFs
 │   ├── AbbVie Long-Term Guidance and Pipeline Update.pdf
 │   ├── BMY-2024-Q1-Results-Investor-Presentation-with-Appendix.pdf
 │   ├── JNJ-Pipeline-2Q2024.pdf
 │   └── ph-rd-pipeline-2025-07-24-update-20250725.pdf
-├── dev-notebooks/          # Development & reference notebooks
-├── dev-data/              # Full dataset (not used in workshop)
-├── slides/                 # Presentation materials
-├── WORKSHOP_PLAN.md       # Detailed workshop plan
 └── README.md              # This file
 ```
 
@@ -97,12 +93,10 @@ GraphRAG-Workshop/
 
 By the end of this workshop, you'll be able to:
 
-✅ Build knowledge graphs from unstructured documents  
-✅ Use LLMs for automatic entity extraction  
+✅ Build knowledge graphs from unstructured documents using the simpleKGpipeline 
 ✅ Query graphs using Text2Cypher (natural language → Cypher)  
-✅ Implement complete GraphRAG pipelines  
 ✅ Understand when custom extractors are needed  
-✅ Extend to agentic patterns  
+✅ Extend to agentic patterns
 
 ## 📊 Pharmaceutical Schema
 
@@ -125,6 +119,7 @@ All notebooks use a consistent schema:
 - [Neo4j](https://neo4j.com/) - Graph database
 - [Neo4j GraphRAG Python](https://neo4j.com/docs/neo4j-graphrag-python) - Official GraphRAG package
 - [Google Gemini](https://ai.google.dev/) - LLM for extraction & generation
+- [OpenAI ]
 - Python 3.9+
 - Jupyter / Google Colab
 
@@ -144,46 +139,4 @@ All notebooks use a consistent schema:
 ### Tutorials & Blog Posts
 - [GraphRAG Python Package Blog](https://neo4j.com/blog/graphrag-python-package/)
 - [Knowledge Graphs for RAG](https://neo4j.com/blog/knowledge-graphs-rag-better-context/)
-
-## 🐛 Troubleshooting
-
-### Neo4j Connection Issues
-- Verify your URI format: `neo4j+s://` for Aura, `bolt://` or `neo4j://` for local
-- Check username and password
-- Ensure database is running
-
-### Gemini API Issues
-- Verify API key is correct
-- Check you have quota remaining
-- Ensure `GEMINI_API_KEY` environment variable is set
-
-### PDF Download Issues
-- Manually upload PDFs to `workshop-data/` folder in Colab
-- Files available in repository's `workshop-data/` directory
-
-### Common Errors
-- `Module not found`: Run the pip install cell again
-- `Index already exists`: This is fine, ignore the warning
-- `Rate limit exceeded`: Wait a moment and retry
-
-## 👥 Contributing
-
-Found an issue or have a suggestion? Please open an issue or submit a pull request!
-
-## 📝 License
-
-This workshop material is provided for educational purposes.
-
-## 🙏 Acknowledgments
-
-- Neo4j GraphRAG Python team
-- Workshop participants and feedback
-- Pharmaceutical companies for publicly available pipeline data
-
----
-
-**Questions during the workshop?** Ask the instructor!  
-**Questions later?** Open an issue on this repository or reach out on [Neo4j Community](https://community.neo4j.com/)
-
-Happy Graph Building! 🚀
 
